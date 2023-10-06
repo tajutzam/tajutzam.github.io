@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+	<script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-800 text-gray-500">
+    <header class="z-10 sticky top-0 bg-gray-950 py-5">
+      <!-- header -->
+	  <nav class="w-9/12 flex flex-row mx-auto justify-between">
+		<div class="uppercase text-lg basis-1/4">
+		  <!-- logo -->
+		  <a href="#hero">
+			<span class="font-extrabold text-white">Zam.jv</span>
+			<span class="font-extralight text-blue-400">Backend Dev.</span>
+		  </a>
+		</div>
+		<div class="basis-1/2 flex items-center justify-between" id="navLinks">
+		  <!-- Links -->
+		  <div class="md:flex md:items-center hidden" id="navLinksDesktop">
+			<a href="#services" class="px-4 py-2 text-white">Services</a>
+			<a href="#portfolios" class="px-4 py-2 text-white">Portfolios</a>
+			<a href="#experiences" class="px-4 py-2 text-white">Experiences</a>
+			<a href="#contact" class="px-4 py-2 text-white">Contact</a>
+		  </div>
+		  <!-- Hamburger Button (Right-aligned) -->
+		  <button
+			class="md:hidden text-white focus:outline-none items-end"
+			id="hamburgerButton"
+		  >
+			<svg
+			  class="w-6 h-6"
+			  fill="none"
+			  stroke="currentColor"
+			  viewBox="0 0 24 24"
+			  xmlns="http://www.w3.org/2000/svg"
+			>
+			  <path
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M4 6h16M4 12h16m-7 6h7"
+			  ></path>
+			</svg>
+		  </button>
+		</div>
+	  </nav>
+	  
+	  <!-- List Content -->
+	  <div
+		class="md:hidden absolute right-0 mt-16 bg-white w-48 rounded-lg shadow-lg hidden"
+		id="listContent"
+	  >
+		<ul>
+		  <li>
+			<a href="#services" class="block px-4 py-2 hover:bg-gray-200">Services</a>
+		  </li>
+		  <li>
+			<a href="#portfolios" class="block px-4 py-2 hover:bg-gray-200">Portfolios</a>
+		  </li>
+		  <li>
+			<a href="#experiences" class="block px-4 py-2 hover:bg-gray-200">Experiences</a>
+		  </li>
+		  <li>
+			<a href="#contact" class="block px-4 py-2 hover:bg-gray-200">Contact</a>
+		  </li>
+		</ul>
+	  </div>
+	  
+	  <script>
+		const hamburgerButton = document.getElementById('hamburgerButton');
+		const listContent = document.getElementById('listContent');
+	  
+		hamburgerButton.addEventListener('click', () => {
+		  if (listContent.style.display === 'block') {
+			listContent.style.display = 'none';
+		  } else {
+			listContent.style.display = 'block';
+		  }
+		});
+	  </script>
+				  
+	  
+    </header>
+
+    <main id="hero" class="relative -top-20">
+      <!-- Main Content -->
+      <div class="bg-gray-950">
+        <!-- Hero Section-->
+        <div class="mx-auto flex flex-nowrap h-screen items-center w-9/12">
+          <div class="basis-1/2">
+            <!-- deskripsi -->
+            <div class="flex items-center">
+              <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                <line x1="0" y1="10px" x2="10px" y2="10px" />
+              </svg>
+              <h2 class="uppercase text-xs font-extralight tracking-ngangkang">
+                my name is
+              </h2>
+            </div>
+            <h3 class="font-bold text-4xl text-white">
+              <span>Mohammad Tajut</span>
+              <span class="text-blue-700">Zamzami.</span>
+            </h3>
+            <p class="font-light">
+              I am a backend developer, I am experienced in backend development
+              using several technologies such as Springboot, Laravel, Javascript
+              and MySQL. I also have skills in the field of mobile development.
+            </p>
+            <div class="flex flex-row mt-5 space-x-3">
+              <img class="w-6 h-6" src="img/Instagram.svg" alt="" />
+              <img class="w-6 h-6" src="img/Github.svg" alt="" />
+              <img class="w-6 h-6" src="img/Twitter.svg" alt="" />
+              <img class="w-6 h-6" src="img/Linkedin.svg" alt="" />
+            </div>
+          </div>
+          <!-- avatar -->
+          <div class="basis-1/2">
+            <img class="mx-auto" src="img/avatar.png" alt="foto ketje" />
+          </div>
+        </div>
+      </div>
+
+      <div id="services" class="bg-slate-50 pt-20 pb-20">
+        <!-- services -->
+        <div class="w-9/12 mx-auto">
+          <div class="flex flex-col place-items-center">
+            <!-- judul -->
+            <div>
+              <div class="flex items-center">
+                <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                  <line x1="0" y1="10px" x2="10px" y2="10px" />
+                </svg>
+                <h2
+                  class="uppercase text-xs font-extralight tracking-ngangkang"
+                >
+                  services
+                </h2>
+              </div>
+              <h3 class="text-3xl">Specialized in</h3>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-10">
+            <!-- cards -->
+            <div class="rounded-lg bg-white shadow-lg">
+              <div class="flex flex-col items-center py-10 px-10">
+                <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
+                  <img class="w-full" src="img/crown.svg" alt="" />
+                </div>
+                <h4 class="text-black mt-5">Backend Developer</h4>
+                <p class="text-center font-extralight text-sm mt-2 text-gray">
+					build a backend system that suits your needs by considering high security of course.
+                </p>
+              </div>
+            </div>
+            <div class="rounded-lg bg-white shadow-lg">
+              <div class="flex flex-col items-center py-10 px-10">
+                <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
+                  <img class="w-full" src="img/app.svg" alt="" />
+                </div>
+                <h4 class="text-black mt-5">Mobile Development</h4>
+                <p class="text-center font-extralight text-sm mt-2 text-gray">
+					Build mobile applications using flutter or java as a solution to your needs
+                </p>
+              </div>
+            </div>
+            <div class="rounded-lg bg-white shadow-lg">
+              <div class="flex flex-col items-center py-10 px-10">
+                <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
+                  <img class="w-full" src="img/globe.svg" alt="" />
+                </div>
+                <h4 class="text-black mt-5">Web Development</h4>
+                <p class="text-center font-extralight text-sm mt-2 text-gray">
+                  Create and maintain your websites and also take care of its
+                  performance and traffic capacity.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="portfolio" class="bg-gray-950 py-40">
+        <!-- portfolio -->
+        <div class="w-9/12 mx-auto">
+          <div class="flex flex-col">
+            <!-- judul -->
+            <div class="flex items-center">
+              <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                <line x1="0" y1="10px" x2="10px" y2="10px" />
+              </svg>
+              <h2 class="uppercase text-xs font-extralight tracking-ngangkang">
+                my works
+              </h2>
+            </div>
+            <h3 class="text-3xl text-white">Featured Portfolios</h3>
+          </div>
+
+
+		  <!-- Grid wrapper -->
+		
+		  <div class="grid grid-cols-1 gap-20 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+			<!-- cards -->
+			<div class="rounded-lg shadow-lg overflow-hidden">
+			  <img
+				class="object-cover h-48 w-full opacity-50"
+				src="img/companyprofile.png"
+				alt=""
+			  />
+			  <div class="bg-white py-2 px-4">
+				<h4 class="text-sm font-medium text-gray-800">
+				  Company Profile
+				</h4>
+				<h5 class="text-sm font-mono">Tailwind CSS</h5>
+			  </div>
+			</div>
+		  
+			<div class="rounded-lg shadow-lg overflow-hidden">
+			  <img
+				class="object-cover h-48 w-full opacity-50"
+				src="img/dashboard.png"
+				alt=""
+			  />
+			  <div class="bg-white py-2 px-4">
+				<h4 class="text-sm font-medium text-gray-800">Dashboard</h4>
+				<h5 class="text-sm font-mono">React JS</h5>
+			  </div>
+			</div>
+		  
+			<div class="rounded-lg shadow-lg overflow-hidden">
+			  <img
+				class="object-cover h-48 w-full opacity-50"
+				src="img/lms.png"
+				alt=""
+			  />
+			  <div class="bg-white py-2 px-4">
+				<h4 class="text-sm font-medium text-gray-800">LMS</h4>
+				<h5 class="text-sm font-mono">PHP</h5>
+			  </div>
+			</div>
+		  
+			<div class="rounded-lg shadow-lg overflow-hidden">
+			  <img
+				class="object-cover h-48 w-full opacity-50"
+				src="img/agency.png"
+				alt=""
+			  />
+			  <div class="bg-white py-2 px-4">
+				<h4 class="text-sm font-medium text-gray-800">
+				  Agency Website
+				</h4>
+				<h5 class="text-sm font-mono">Wordpress</h5>
+			  </div>
+			</div>
+		  </div>
+		  
+		  
+ 		  
+		  
+      </div>
+
+      <div id="experiences" class="bg-gray-950 py-40">
+        <!-- experiences -->
+        <div class="mx-auto w-9/12 flex grid items-center">
+          <div class="basis-1/3">
+            <div class="flex flex-col">
+              <!-- judul -->
+              <div class="flex items-center">
+                <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                  <line x1="0" y1="10px" x2="10px" y2="10px" />
+                </svg>
+                <h2
+                  class="uppercase text-xs font-extralight tracking-ngangkang"
+                >
+                  career path
+                </h2>
+              </div>
+              <h3 class="text-3xl text-white">Experiences</h3>
+
+            </div>
+          </div>
+
+          <div class="basis-2/3">
+            <h4 class="text-2xl font-bold text-gray-200">
+              Backend Developer TEFA
+            </h4>
+            <h5 class="text-sm font-light">East Java, Jember</h5>
+            <p class="mt-5 text-light text-gray-200">
+              September - now
+            </p>
+            <div class="mt-2">
+              <img src="/WDWP_Web_Dev_Web_Prog//website_portfolio/public/img/laravel-icon-497x512-uwybstke.png" class="h-6" alt="">
+            </div>
+            <hr class="my-5" />
+            <ul class="list-disc list-inside leading-10">
+              <li>Creating APIs for Mobile application needs</li>
+              <li>
+                Collaborate with back-end developers and web designers to
+                improve usability,
+              </li>
+              <li>
+                Developing an admin panel.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact" class="bg-white pt-40 pb-9">
+        <!-- contact -->
+        <div class="mx-auto w-9/12 flex flex-row items-center">
+          <div class="basis-1/2">
+            <div class="flex flex-col">
+              <!-- judul -->
+              <div class="flex items-center">
+                <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                  <line x1="0" y1="10px" x2="10px" y2="10px" />
+                </svg>
+                <h2
+                  class="uppercase text-xs font-extralight tracking-ngangkang"
+                >
+                  Inquiry
+                </h2>
+              </div>
+              <h3 class="text-3xl text-gray-800">Contact Me</h3>
+            </div>
+
+            <form action="#" method="POST" class="max-w-md mt-10">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-semibold"
+                  >name</label
+                >
+                <input
+                  class="bg-blue-100 rounded-md px-4 py-2 w-full focus:ring-blue-950"
+                  type="text"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-semibold"
+                  >Email</label
+                >
+                <input
+                  class="bg-blue-100 rounded-md px-4 py-2 w-full focus:ring-blue-950"
+                  type="email"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-semibold"
+                  >Message</label
+                >
+                <textarea
+                  class="bg-blue-100 rounded-md px-4 py-2 w-full focus:ring-blue-950"
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="4"
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  class="hover:bg-blue-600 bg-blue-500 text-white font-semibold py-2 px-4 rounded-md w-full"
+                  type="submit"
+                >
+                  Send Email
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="basis-1/2 ml-10">
+            <div class="flex flex-row gap-5 p-5">
+              <div class="w-10 h-10 p-2 bg-blue-100 rounded-2xl">
+                <img class="w-full" src="img/pin.svg" alt="" />
+              </div>
+              <div>
+                <h4 class="text-lg text-gray-800 font-medium">Address</h4>
+                <h5 class="font-thin">
+                  Eas Java , Banyuwangi Gambiran
+                </h5>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-5 p-5">
+              <div class="w-10 h-10 p-2 bg-blue-100 rounded-2xl">
+                <img class="w-full" src="img/phone call.svg" alt="" />
+              </div>
+              <div>
+                <h4 class="text-lg text-gray-800 font-medium">Phone Call</h4>
+                <h5 class="font-thin">(+62)85607185972</h5>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-5 p-5">
+              <div class="w-10 h-10 p-2 bg-blue-100 rounded-2xl">
+                <img class="w-full" src="img/mail.svg" alt="" />
+              </div>
+              <div>
+                <h4 class="text-lg text-gray-800 font-medium">E-Mail</h4>
+                <h5 class="font-thin">mohammadtajutzamzami07@gmail.com</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-white text-center pt-10 pb-10 font-mono -mt-20">
+      <!-- footer -->
+      2023 Mohammad Tajut Zamzami. All rights reserved
+    </footer>
+  </body>
+</html>
